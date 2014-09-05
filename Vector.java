@@ -77,7 +77,8 @@ public class Vector {
     }
 
     public Vector findRandomPerpendicular() {
-    	// TODO: this might not be correct
+    	// TODO: this doesn't work when any of the components are 0
+    	// TODO: throw exception if magnitude is 0
         int x = (int) (Math.random() * 10);
         int y = (int) (Math.random() * 10);
         double z = -1 * (((x * this.getX()) + (y * this.getY())) / this.getZ());

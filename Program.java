@@ -15,10 +15,9 @@ public class Program {
         
         v.setX(1);
         v.setY(1);
-        Vector perp = v.findRandomPerpendicular();
-        System.out.println(v.toString());
-        System.out.println(perp.toString());
-        System.out.println(v.angleTo(perp)); // TODO: should be 90
+        v.setZ(1);
+        
+        assertEquals(90.0, v.angleTo(v.findRandomPerpendicular()), MAX_DELTA);
     }
 
 }
